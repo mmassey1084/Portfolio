@@ -204,7 +204,7 @@ export default function HomePage() {
         </AccordionGroup>
       </PanelSection>
 
-      <PanelSection title="Call To Action">
+      <PanelSection title="Contact Me">
         <div className="card">
           <strong>Want to work together?</strong>
           <p>

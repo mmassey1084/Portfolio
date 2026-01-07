@@ -43,7 +43,6 @@ export default function ContactPage() {
                 GitHub
               </a>
 
-              {/* Use a button to run fallback logic */}
               <button type="button" className="btn btn-primary" onClick={openEmail}>
                 Email Me
               </button>
