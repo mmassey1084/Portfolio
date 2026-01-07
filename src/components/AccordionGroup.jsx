@@ -1,30 +1,23 @@
 import React, { useMemo, useState } from "react";
+import AccordionItem from "./AccordionItem.jsx"; // <-- adjust path
 
-/**
- * AccordionGroup
- * Controls which accordion item is open.
- * Only ONE item can be open at a time.
- */
 export default function AccordionGroup({ children, defaultOpenIndex = null }) {
   const [openItemIndex, setOpenItemIndex] = useState(defaultOpenIndex);
 
-  function handleToggleItem(clickedIndex) {
-    setOpenItemIndex((previousIndex) =>
-      previousIndex === clickedIndex ? null : clickedIndex
-    );
-  }
-
   const items = useMemo(() => {
     return React.Children.toArray(children).filter((child) => {
-      if (!React.isValidElement(child)) return false;
-      return child.type?.name === "AccordionItem";
+      return React.isValidElement(child) && child.type === AccordionItem; // ✅ stable
     });
   }, [children]);
+
+  function handleToggleItem(clickedIndex) {
+    setOpenItemIndex((prev) => (prev === clickedIndex ? null : clickedIndex));
+  }
 
   return (
     <div className="accordion-group">
       {items.map((child, index) => (
-        <child.type
+        <AccordionItem
           key={child.key ?? index}
           index={index}
           isOpen={openItemIndex === index}
@@ -35,4 +28,5 @@ export default function AccordionGroup({ children, defaultOpenIndex = null }) {
     </div>
   );
 }
+
 
