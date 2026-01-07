@@ -298,3 +298,10 @@ button, input, select, textarea{ font-family: inherit; }
   font-weight: 600;
   color: rgba(55,214,90,0.45);
 }
+/* Mobile */
+@media (max-width: 640px) { 
+  .top-nav__inner{
+    padding:0px;
+}
+}
+
