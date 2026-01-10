@@ -69,7 +69,7 @@ export default function ContactPage() {
 
             <div className="btn-row">
               <button className="btn btn-primary" type="submit">
-                Send (wire this later)
+               (Coming Soon)
               </button>
              
             </div>
