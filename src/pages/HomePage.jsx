@@ -165,9 +165,10 @@ export default function HomePage() {
                 enhance visitor engagement and accessibility. I worked closely
                 with stakeholders to translate real-world requirements into
                 intuitive mobile features and user flows. My work focused
-                primarily on front-end mobile development using React-based
+                on front-end mobile development using React-based
                 technologies, ensuring the app felt smooth and responsive across
-                devices. I integrated dynamic content and APIs to support tours,
+                devices and back-end technologies such as Node.js. I integrated 
+                dynamic content and APIs to support tours,
                 archival information, and interactive experiences within the
                 app. Throughout development, I emphasized performance,
                 usability, and accessibility while iterating on features based
