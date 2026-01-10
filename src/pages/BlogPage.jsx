@@ -6,7 +6,6 @@ export default function BlogPage() {
       <PanelSection title="Blog">
         <div className="card">
           <strong>Coming soon</strong>
-          <p>Add posts later (Markdown, a CMS, or hardcoded cards).</p>
         </div>
       </PanelSection>
     </div>
