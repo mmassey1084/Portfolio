@@ -31,7 +31,7 @@ export const projectItems = [
     ],
     technologyStack: ["React", "HTML/CSS", "JavaScript", "MySQL", "Node.js"],
     links: [
-      { label: "Live Site", url: "https://dreamy-esthetics.netlify.app/?fbclid=IwY2xjawPKEmRleHRuA2FlbQIxMABicmlkETF6bElxbkFpYk12T0xVMGJRc3J0YwZhcHBfaWQQMjIyMDM5MTc4ODIwMDg5MgABHtGrbUTHWKCNBS_i1iP-a_GQOZ3HbQA1yacFMCLUsYcpcW-e3RPCR5QnIYTd_aem_o1QH053KKm0te9xk-WB3nA" },
+      { label: "Live Site", url: "http://dreamy-esthetics.s3-website-us-east-1.amazonaws.com/" },
     ],
   },
   {
