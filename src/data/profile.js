@@ -60,7 +60,7 @@ export const profileData = {
     "Coursera: The Full-Stack",
     "Coursera: React Basics",
     "Coursera: Advanced React",
-    "Coursera:: Developing Back-End Apps with Node.js and Express"
+    "Coursera: Developing Back-End Apps with Node.js and Express"
   ],
   achievements: [
     "Built a production-style app from scratch during an internship.",
