@@ -451,3 +451,6 @@ button, input, select, textarea{ font-family: inherit; }
 .scroll-btn{
   animation: floatDown 2s ease-in-out infinite;
 }
+.page-content{
+  padding: 80px;
+}
