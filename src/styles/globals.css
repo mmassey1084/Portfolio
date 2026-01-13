@@ -14,7 +14,6 @@
   --mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
   --sans: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji","Segoe UI Emoji";
 
-  /* Nav height (used for scroll offset) */
   --nav-h: 68px;
 }
 
@@ -73,12 +72,11 @@ button, input, select, textarea{ font-family: inherit; }
   padding: 24px 0 42px;
 }
 
-/* When we scroll to #content, land below the fixed nav */
 #content{
   scroll-margin-top: calc(var(--nav-h) + 16px);
 }
 
-/* ===== Top navigation (fixed overlay, never affects layout) ===== */
+/* ===== Top navigation ===== */
 .top-nav{
   position: fixed;
   top: 0; left: 0; right: 0;
@@ -191,15 +189,30 @@ button, input, select, textarea{ font-family: inherit; }
 .kv strong{ font-size: 16px; }
 .kv small{ color: var(--muted); }
 
-.pills{ display:flex; flex-wrap: wrap; gap: 8px; margin-top: 12px; }
+.pills{ 
+  display:flex; 
+  flex-wrap: wrap; 
+  gap: 8px; 
+  margin-top: 12px; 
+}
 .pill{
-  display:inline-flex; align-items:center; gap: 8px;
+  display:inline-flex; 
+  align-items:center; 
+  gap: 8px;
   padding: 8px 10px;
   border-radius: 999px;
   border: 1px solid var(--line);
   background: rgba(255,255,255,0.045);
   color: var(--muted);
   font-size: 13px;
+
+}
+.pill:hover{
+  transform: translateY(-8px) scale(1.04);
+  box-shadow: 
+    0 20px 40px rgba(0,0,0,0.25),
+    0 8px 16px rgba(0,0,0,0.18);
+
 }
 
 .section-title{
@@ -382,7 +395,7 @@ button, input, select, textarea{ font-family: inherit; }
   .nav-link{ padding: 8px 10px; }
 }
 
-/* ===== Entry / Landing Section (FULL BLEED) ===== */
+/* ===== Entry / Landing Section ===== */
 .home{ min-height: 100%; }
 
 /* Full-bleed hero */
@@ -412,16 +425,21 @@ button, input, select, textarea{ font-family: inherit; }
 }
 
 .entry h1{
-  font-size: clamp(2.5rem, 5vw, 3.5rem);
+  font-size: 7rem;
   font-weight: 900;
   margin-bottom: 10px;
+  margin-top: 0;
 }
 
 .entry p{
   font-size: 1.1rem;
   color: var(--muted);
 }
-
+.hero-img {
+  width:300px;
+  height:300px;
+  border-radius: 50%;
+}
 /* Scroll Button */
 .scroll-btn{
   margin-bottom: 10px;
@@ -453,4 +471,11 @@ button, input, select, textarea{ font-family: inherit; }
 }
 .page-content{
   padding: 80px;
+}
+button.card:hover{
+  cursor: pointer;
+  transform: translateY(-8px) scale(1.04);
+  box-shadow: 
+    0 20px 40px rgba(0,0,0,0.25),
+    0 8px 16px rgba(0,0,0,0.18);
 }

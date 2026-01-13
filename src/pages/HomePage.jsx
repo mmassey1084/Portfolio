@@ -8,6 +8,7 @@ import AccordionGroup from "../components/AccordionGroup.jsx";
 import AccordionItem from "../components/AccordionItem.jsx";
 import ChurchStudioLogo from "../assets/New_Logo.png";
 import WorldWideTech from "../assets/tech.png";
+import HeroImg from "../assets/hero-photo.png";
 
 export default function HomePage() {
   const entryRef = useRef(null);
@@ -42,6 +43,7 @@ export default function HomePage() {
 
       <section ref={entryRef} className="entry">
         <div className="entry-content">
+          <img src={HeroImg} alt="coding photo" className="hero-img" />
           <h1>Michael Massey</h1>
           <p>Front-End & Full-Stack Developer/Software Developer</p>
         </div>
