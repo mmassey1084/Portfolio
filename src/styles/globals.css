@@ -487,4 +487,7 @@ button.card:hover{
     .entry h1 {
       font-size: 3rem;
     }
+    .panel{
+      margin-top:60px;
+    }
 }
