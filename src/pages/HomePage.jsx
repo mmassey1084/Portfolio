@@ -56,7 +56,16 @@ export default function HomePage() {
       <main ref={contentRef} id="content" className="container" role="main">
         <div className="grid" style={{ gap: 16 }}>
           <ProfileHeader />
-
+          
+          <div className="grid about">
+            <PanelSection title="A little more about me">
+              <div className="grid">
+                <p>I’m a full-stack developer who loves building modern, interactive web and mobile experiences using tools like React, Vite, Node.js, Express, MySQL, and Tailwind CSS. I got into tech because I enjoy turning ideas into real, usable products; whether that’s a booking system, or a full production app like the one I’m building for The Church Studio in Tulsa.</p>
+                <p>I have a strong foundation in JavaScript frameworks, and I focus on writing clean, scalable code and creating interfaces that feel smooth, and accessible. I care a lot about details like performance, responsiveness, and accessibility; making sure what I build works well for everyone. Lately, I’ve been diving deeper into backend systems, APIs, authentication, databases, and integrations like Stripe, Firebase, and third-party platforms.</p>
+                <p> Outside of coding, I’m big into design, sports, and creative projects—everything from Pokémon card tracking apps to restaurant and spa websites. I thrive in collaborative environments, love learning fast, and enjoy tackling hard problems. My goal is to build meaningful products that people actually enjoy using and that make a real impact.</p>
+              </div>
+            </PanelSection>
+          </div>
           <div className="grid grid-2">
             <PanelSection title="Specialties & Services">
               <div className="grid">

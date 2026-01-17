@@ -9,7 +9,7 @@ export default function TopNavigation() {
             <span>mm</span>
           </div>
           <div>
-            <div style={{ fontWeight: 900 }}>Portfolio</div>
+            <div style={{ fontWeight: 900 }}>Michael's Portfolio</div>
             <div style={{ color: "var(--muted)", fontSize: 12 }}>
               Modern • Interactive • Clean
             </div>

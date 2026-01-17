@@ -2,7 +2,6 @@ export const profileData = {
   name: "Michael Massey",
   headline: "Junior Full-Stack / Junior Software Engineer",
   location: "Tulsa, OK (open to relocate)",
-  tagline: "I build clean, modern web apps that feel smooth to use.",
   avatarPath: "/avatar.jpeg",
   logoText: "mm",
   contact: {

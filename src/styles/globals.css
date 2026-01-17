@@ -556,6 +556,14 @@ textarea {
   height: 300px;
   border-radius: 50%;
 }
+/*paragraph styles*/
+.about p {
+  margin-bottom: 2px;
+}
+
+.about p:last-child {
+  margin-bottom: 0;
+}
 /* Scroll Button */
 .scroll-btn {
   margin-bottom: 10px;
@@ -610,11 +618,11 @@ textarea {
   .panel {
     margin-top: 60px;
   }
-    .panel__inner {
+  /*  .panel__inner {
     max-width: 100%;
     padding-left: 12px;
     padding-right: 12px;
-  }
+  }*/
   .top-nav__inner {
     flex-direction: column;
     align-items: stretch;
@@ -648,3 +656,4 @@ textarea {
     box-shadow: 0 20px 40px rgba(0, 0, 0, 0.25), 0 8px 16px rgba(0, 0, 0, 0.18);
   }
 }
+
