@@ -610,6 +610,11 @@ textarea {
   .panel {
     margin-top: 60px;
   }
+    .panel__inner {
+    max-width: 100%;
+    padding-left: 12px;
+    padding-right: 12px;
+  }
   .top-nav__inner {
     flex-direction: column;
     align-items: stretch;
