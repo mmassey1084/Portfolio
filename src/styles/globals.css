@@ -609,6 +609,7 @@ textarea {
   }
   .panel {
     margin-top: 60px;
+    width:80%;
   }
   .top-nav__inner {
     flex-direction: column;
