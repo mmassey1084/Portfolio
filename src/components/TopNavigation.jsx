@@ -10,9 +10,6 @@ export default function TopNavigation() {
           </div>
           <div>
             <div style={{ fontWeight: 900 }}>Michael's Portfolio</div>
-            <div style={{ color: "var(--muted)", fontSize: 12 }}>
-              Modern • Interactive • Clean
-            </div>
           </div>
         </div>
 
