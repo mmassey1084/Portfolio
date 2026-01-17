@@ -6,7 +6,7 @@ export default function SiteFooter() {
 
   return (
     <footer className="footer">
-      © {currentYear} • Built with React • Clean UI • Accessible-first <br />
+      © {currentYear} • Built with React •  Developed by Michael Massey <br />
       <a className="footer-btn" href={links.githubUrl} target="_blank" rel="noreferrer">
                 <FaGithub /> GitHub
       </a>
