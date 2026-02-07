@@ -1,5 +1,35 @@
+# Node
 node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Env files
+.env
+.env.local
+.env.production
+.env.development
+
+# Build outputs
 dist/
 build/
-.env
+client/dist/
+client/build/
+server/dist/
+
+# Logs
+logs/
+*.log
+
+# OS / editor junk
 .DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# Coverage
+coverage/
+
+# Database dumps
+*.sql
+*.sqlite

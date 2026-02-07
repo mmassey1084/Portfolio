@@ -45,9 +45,8 @@ export default function ProjectsPage() {
   return (
     <>
       <TopNavigation />
-      <div className="page-content">
+      <div className="page-content  with-fixed-nav space fix-margins">
         <div className="grid" style={{ gap: 16 }}>
-          <TopNavigation />
           <PanelSection title="Projects">
             <div className="grid" style={{ gap: 12 }}>
               <div className="grid" style={{ gap: 10 }}>

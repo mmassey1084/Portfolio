@@ -34,7 +34,7 @@ export default function ContactPage() {
   return (
     <>
       <TopNavigation />
-      <div className="page-content">
+      <div className="page-content  with-fixed-nav space fix-margins">
         <div className="grid" style={{ gap: 16 }}>
           <PanelSection title="Contact">
             <div className="grid grid-2">

@@ -3,6 +3,7 @@ export const profileData = {
   headline: "Junior Full-Stack / Junior Software Engineer",
   location: "Tulsa, OK (open to relocate)",
   avatarPath: "/avatar.jpeg",
+  phonePath: "/phone.png",
   logoText: "mm",
   contact: {
     emailAddress: "mmassey1084@gmail.com",
@@ -10,8 +11,7 @@ export const profileData = {
   },
   links: {
     linkedInUrl: "https://www.linkedin.com/in/michael-massey-488496132",
-    githubUrl: "https://github.com/mmassey1084",
-    portfolioUrl: "https://yourportfolio.com",
+    githubUrl: "https://github.com/mmassey1084"
   },
   specialties: [
     {

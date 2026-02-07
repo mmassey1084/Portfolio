@@ -19,6 +19,24 @@ export const projectItems = [
     ],
   },
   {
+    projectId: "nike-reimagined",
+    title: "Nike Reimagined Website",
+    role: "Full-Stack / Front-End",
+    year: "2025",
+    tags: ["React", "Tailwind", "Vite",],
+    summary: "A modern, responsive e-commerce site redesign for Nike, featuring dynamic product displays and a sleek user interface.",
+    highlights: [
+      "Developed reusable components and layout systems to streamline page creation and ensure design consistency.",
+      "Implemented responsive design techniques to provide an optimal viewing experience across various devices.",
+      "Enhanced user engagement with interactive elements and smooth navigation patterns.",
+    ],
+    technologyStack: ["React", "JavaScript", "Tailwind CSS", "Vite"],
+    links: [
+      { label: "Live Site", url: "http://nike-reimagined.s3-website-us-east-1.amazonaws.com/" },
+    ],
+
+  },
+  {
     projectId: "dreamy-esthetics",
     title: "Dreamy Esthetics Website",
     role: "Full-Stack / Front-End",
@@ -49,7 +67,7 @@ export const projectItems = [
     ],
     technologyStack:["React", "HTML/CSS", "JavaScript","Vite", "Node.js"],
     links: [
-      {label: "GitHub", url:"https://github.com/mmassey1084/Luma-Kitchen"}
+      {label: "Live Site", url:"http://luma-kitchen.s3-website-us-east-1.amazonaws.com/"}
     ]
   },
   {

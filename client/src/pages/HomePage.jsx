@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState } from "react";
 import TopNavigation from "../components/TopNavigation.jsx";
-
+import React from "react";
 import ProfileHeader from "../components/ProfileHeader.jsx";
 import PanelSection from "../components/PanelSection.jsx";
 import { profileData } from "../data/profile.js";
@@ -9,6 +9,7 @@ import AccordionItem from "../components/AccordionItem.jsx";
 import ChurchStudioLogo from "../assets/New_Logo.png";
 import WorldWideTech from "../assets/tech.png";
 import HeroImg from "../assets/hero-photo.png";
+import EntryHero from "../components/EntryHero.jsx"; 
 
 export default function HomePage() {
   const entryRef = useRef(null);
@@ -18,9 +19,11 @@ export default function HomePage() {
   const scrollToContent = () => {
     contentRef.current?.scrollIntoView({ behavior: "smooth", block: "start" });
   };
+
   useEffect(() => {
     window.scrollTo({ top: 0, left: 0, behavior: "auto" });
   }, []);
+
   // ✅ Nav shows when the entry is NOT on screen
   useEffect(() => {
     const currentEntryRef = entryRef.current;
@@ -30,7 +33,7 @@ export default function HomePage() {
       ([entry]) => {
         setNavVisible(!entry.isIntersecting);
       },
-      { threshold: 0.35 } 
+      { threshold: 0.35 }
     );
 
     interObs.observe(currentEntryRef);
@@ -41,31 +44,55 @@ export default function HomePage() {
     <div className="home">
       {navVisible && <TopNavigation />}
 
-      <section ref={entryRef} className="entry">
-        <div className="entry-content">
-          <img src={HeroImg} alt="coding photo" className="hero-img" />
-          <h1>Michael Massey</h1>
-          <p>Front-End & Full-Stack Developer/Software Developer</p>
-        </div>
+      {/* ✅ NEW: Entry moved into its own component */}
+      <EntryHero
+        entryRef={entryRef}
+        onScrollToContent={scrollToContent}
+        heroSrc={HeroImg}
+      />
 
-        <button className="scroll-btn" onClick={scrollToContent}>
-          View My Work ↓
-        </button>
-      </section>
-
-      <main ref={contentRef} id="content" className="container" role="main">
+      <main
+        ref={contentRef}
+        id="content"
+        className="container  with-fixed-nav"
+        role="main"
+      >
         <div className="grid" style={{ gap: 16 }}>
           <ProfileHeader />
-          
+
           <div className="grid about">
             <PanelSection title="Let's dive deeper into more about me">
               <div className="grid">
-                <p>I’m a full-stack developer who loves building modern, interactive web and mobile experiences using tools like React, Vite, Node.js, Express, MySQL, and Tailwind CSS. I got into tech because I enjoy turning ideas into real, usable products; whether that’s a booking system, or a full production app like the one I’m building for The Church Studio in Tulsa.</p>
-                <p>I have a strong foundation in JavaScript frameworks, and I focus on writing clean, scalable code and creating interfaces that feel smooth, and accessible. I care a lot about details like performance, responsiveness, and accessibility; making sure what I build works well for everyone. Lately, I’ve been diving deeper into backend systems, APIs, authentication, databases, and integrations like Stripe, Firebase, and third-party platforms.</p>
-                <p> Outside of coding, I’m big into design, sports, and creative projects; everything from Pokémon card tracking apps to restaurant and spa websites. I thrive in collaborative environments, love learning fast, and enjoy tackling hard problems. My goal is to build meaningful products that people actually enjoy using and that make a real impact.</p>
+                <p>
+                  I’m a full-stack developer who loves building interactive web
+                  and mobile applications using tools like React, Vite, Node.js,
+                  Express, MySQL, and Tailwind CSS. I got into tech because I
+                  enjoy turning ideas into real, usable products; whether that’s
+                  a booking system, or a full production app like the one I’m
+                  building for The Church Studio in Tulsa.
+                </p>
+                <p>
+                  I have a strong foundation in JavaScript frameworks, and I
+                  focus on writing clean, scalable code and creating interfaces
+                  that feel smooth, and accessible. I care a lot about details
+                  like performance, responsiveness, and accessibility; making
+                  sure what I build works well for everyone. Lately, I’ve been
+                  diving deeper into backend systems, APIs, authentication,
+                  databases, and integrations like Stripe, Firebase, and
+                  third-party platforms.
+                </p>
+                <p>
+                  Outside of coding, I’m big into design, sports, and creative
+                  projects; everything from Pokémon card tracking apps to
+                  restaurant and spa websites. I thrive in collaborative
+                  environments, love learning fast, and enjoy tackling hard
+                  problems. My goal is to build meaningful products that people
+                  actually enjoy using and that make a real impact.
+                </p>
               </div>
             </PanelSection>
           </div>
+
           <div className="grid grid-2">
             <PanelSection title="Specialties & Services">
               <div className="grid">
@@ -97,7 +124,7 @@ export default function HomePage() {
               </div>
 
               <div style={{ marginTop: 12 }}>
-                <strong>Quantifiable Achievements</strong>
+                <strong>Achievements</strong>
                 <ul style={{ color: "var(--muted)", marginTop: 8 }}>
                   {profileData.achievements.map((achievementText) => (
                     <li key={achievementText}>{achievementText}</li>
@@ -128,10 +155,10 @@ export default function HomePage() {
               </div>
             </PanelSection>
 
-            <PanelSection title="Testimonials • Awards • Community">
+            <PanelSection title="Feedback • Awards • Community">
               <div className="grid">
                 <div className="card">
-                  <strong>Testimonial</strong>
+                  <strong>What Professors and Employers have said</strong>
                   <p>
                     “Michael has completed several of my advanced courses,
                     including Mobile App Development with React, Web Design and
@@ -155,7 +182,7 @@ export default function HomePage() {
                     codebase and the overall user experience. ”
                   </p>
                   <p style={{ marginTop: 10 }}>
-                    — Teresa Knox , CEO at The Church Studio
+                    — Teresa Knox, CEO at The Church Studio
                   </p>
                 </div>
 
@@ -275,11 +302,7 @@ export default function HomePage() {
                 <a className="btn btn-primary" href="/contact">
                   Hire / Contact Me
                 </a>
-                <a
-                  className="btn"
-                  href={profileData.resumeDownloadUrl}
-                  download
-                >
+                <a className="btn" href={profileData.resumeDownloadUrl} download>
                   Download Resume
                 </a>
               </div>

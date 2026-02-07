@@ -6,7 +6,7 @@ export default function AccordionGroup({ children, defaultOpenIndex = null }) {
 
   const items = useMemo(() => {
     return React.Children.toArray(children).filter((child) => {
-      return React.isValidElement(child) && child.type === AccordionItem; // ✅ stable
+      return React.isValidElement(child) && child.type === AccordionItem; 
     });
   }, [children]);
 

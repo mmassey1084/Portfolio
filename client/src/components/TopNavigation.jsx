@@ -15,9 +15,10 @@ export default function TopNavigation() {
 
         <nav className="nav-links" aria-label="Primary">
           <NavLink className="nav-link" to="/">About</NavLink>
-          <NavLink className="nav-link" to="/projects">Work</NavLink>
-          <NavLink className="nav-link" to="/blog">Blog</NavLink>
+          <NavLink className="nav-link" to="/projects">Projects</NavLink>
+          <NavLink className="nav-link" to="/stats">Stats</NavLink>
           <NavLink className="nav-link" to="/contact">Contact</NavLink>
+          
         </nav>
       </div>
     </header>
