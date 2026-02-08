@@ -1,4 +1,4 @@
-import { summary } from "framer-motion/client";
+import { label, summary } from "framer-motion/client";
 
 export const projectItems = [
   {
@@ -13,9 +13,19 @@ export const projectItems = [
       "Integrated content and structured data so pages stay fast and easy to update.",
       "Focused on accessibility and responsive layouts across devices.",
     ],
-    technologyStack: ["React", "JavaScript", "Node.js", "Express", "Firebase", "REST APIs"],
+    technologyStack: [
+      "React",
+      "JavaScript",
+      "Node.js",
+      "Express",
+      "Firebase",
+      "REST APIs",
+    ],
     links: [
-      { label: "GitHub", url: "https://github.com/mmassey1084/The-Church-Studio-App" },
+      {
+        label: "GitHub",
+        url: "https://github.com/mmassey1084/The-Church-Studio-App",
+      },
     ],
   },
   {
@@ -23,8 +33,9 @@ export const projectItems = [
     title: "Nike Reimagined Website",
     role: "Full-Stack / Front-End",
     year: "2025",
-    tags: ["React", "Tailwind", "Vite",],
-    summary: "A modern, responsive e-commerce site redesign for Nike, featuring dynamic product displays and a sleek user interface.",
+    tags: ["React", "Tailwind", "Vite"],
+    summary:
+      "A modern, responsive e-commerce site redesign for Nike, featuring dynamic product displays and a sleek user interface.",
     highlights: [
       "Developed reusable components and layout systems to streamline page creation and ensure design consistency.",
       "Implemented responsive design techniques to provide an optimal viewing experience across various devices.",
@@ -32,9 +43,46 @@ export const projectItems = [
     ],
     technologyStack: ["React", "JavaScript", "Tailwind CSS", "Vite"],
     links: [
-      { label: "Live Site", url: "http://nike-reimagined.s3-website-us-east-1.amazonaws.com/" },
+      {
+        label: "Live Site",
+        url: "http://nike-reimagined.s3-website-us-east-1.amazonaws.com/",
+      },
+      {
+        label: "GitHub",
+        url: "https://github.com/mmassey1084/nike-reimagined",
+      },
     ],
-
+  },
+  {
+    projectId: "java-task-manager-ui",
+    title: "Java Task Management System (Desktop UI)",
+    role: "Backend / Software Engineer",
+    year: "2026",
+    tags: ["Java", "Swing", "OOP", "Clean Architecture", "RBAC"],
+    summary:
+      "A desktop-based task management system built in Java with a fully interactive Swing UI. Users can create projects, users, and tasks, assign work, and manage task status transitions, all backed by a clean service and controller architecture.",
+    highlights: [
+      "Built a full-featured desktop UI using Java Swing that allows users to interactively create and manage users, projects, and tasks.",
+      "Implemented role-based access control (RBAC) to enforce permissions for actions like assigning tasks and updating status.",
+      "Designed a clean backend architecture with controllers and services, separating UI concerns from business logic.",
+      "Packaged as a runnable JAR so users can download and launch the application locally.",
+    ],
+    technologyStack: [
+      "Java 21",
+      "Java Swing",
+      "Object-Oriented Design",
+      "Service / Controller Architecture",
+    ],
+    links: [
+      {
+        label: "Download Desktop App (JAR)",
+        url: "/downloads/TaskManagerUI.jar",
+      },
+      {
+        label: "GitHub",
+        url: "https://github.com/mmassey1084/java-task-management-system",
+      },
+    ],
   },
   {
     projectId: "dreamy-esthetics",
@@ -49,7 +97,53 @@ export const projectItems = [
     ],
     technologyStack: ["React", "HTML/CSS", "JavaScript", "MySQL", "Node.js"],
     links: [
-      { label: "Live Site", url: "http://dreamy-esthetics.s3-website-us-east-1.amazonaws.com/" },
+      {
+        label: "Live Site",
+        url: "http://dreamy-esthetics.s3-website-us-east-1.amazonaws.com/",
+      },
+      {
+        label: "GitHub",
+        url: "https://github.com/mmassey1084/dreamy-esthetics",
+      },
+    ],
+  },
+  {
+    projectId: "my-saas-app",
+    title: "My SaaS App",
+    role: "Full-Stack",
+    year: "2026",
+    tags: [
+      "React",
+      "Node",
+      "APIs",
+      "Typescript",
+      "TailWind",
+      "Express",
+      "PostgreSQL",
+    ],
+    summary:
+      "Production-style SaaS commerce app with authentication, subscriptions, and Stripe billing, built using a Vite + React frontend and a Node.js + TypeScript backend.",
+    highlights: [
+      "Built like a real SaaS app – Structured with a clear separation between frontend, backend, and shared domain types, following patterns you’d see on an actual engineering team.",
+      "End-to-end type safety – Uses TypeScript across the codebase to keep data models consistent between the API and the frontend and catch bugs early.",
+      "Authentication and subscriptions – Supports user accounts, authentication, and subscription-based billing with Stripe, designed to be flexible as features grow.",
+      "Maintainable, scalable codebase – Focused on clean architecture, readable code, and reusable services so the app can evolve without becoming hard to manage.",
+    ],
+    technologyStack: [
+      "React",
+      "TypeScript",
+      "Node.js",
+      "Express",
+      "PostgreSQL",
+      "Stripe API",
+      "Tailwind CSS",
+    ],
+    links: [
+      { label: "GitHub", url: "https://github.com/mmassey1084/my-saas-app" },
+      {
+        label: "Live Site",
+        url: "http://saas-website-frontend.s3-website-us-east-1.amazonaws.com/",
+      },
     ],
   },
   {
@@ -58,70 +152,87 @@ export const projectItems = [
     role: "Full-Stack / Front-End",
     year: "2025",
     tags: ["React", "Vite", "HTML", "CSS", "Node.js", "Express"],
-    summary: "A Full-stack restaurant template inspired by modern editorial restaurant sites, with real multi-page navigation, menu search, online ordering + reservation availability logic, gift cards, email signup, and social links.",
+    summary:
+      "A Full-stack restaurant template inspired by modern editorial restaurant sites, with real multi-page navigation, menu search, online ordering + reservation availability logic, gift cards, email signup, and social links.",
     highlights: [
       "Created reusable layout components and consistent UI sections to streamline page development.",
       "Implemented responsive design patterns to ensure a polished experience across desktop, tablet, and mobile devices.",
       "Improved site structure, metadata, and semantic HTML for stronger SEO and crawlability.",
-      "Integrated dynamic menu and content rendering to simplify future updates."
+      "Integrated dynamic menu and content rendering to simplify future updates.",
     ],
-    technologyStack:["React", "HTML/CSS", "JavaScript","Vite", "Node.js"],
+    technologyStack: ["React", "HTML/CSS", "JavaScript", "Vite", "Node.js"],
     links: [
-      {label: "Live Site", url:"http://luma-kitchen.s3-website-us-east-1.amazonaws.com/"}
-    ]
+      {
+        label: "Live Site",
+        url: "http://luma-kitchen.s3-website-us-east-1.amazonaws.com/",
+      },
+      { label: "GitHub", url: "https://github.com/mmassey1084/luma-kitchen" },
+    ],
   },
   {
     projectId: "paws-and-forever",
     title: "Paws and Forever",
     role: "Full-Stack / Front-End",
     year: "2023",
-    tags: ["HTML", "CSS", "Node.js", "Express","JavaScript"],
-    summary: "A full-stack web application designed for an animal adoption center. It allows users to browse adoptable dogs, submit adoption requests, and add new dog profiles with images. The system also includes a live countdown, animations, and a responsive design.",
+    tags: ["HTML", "CSS", "Node.js", "Express", "JavaScript"],
+    summary:
+      "A full-stack web application designed for an animal adoption center. It allows users to browse adoptable dogs, submit adoption requests, and add new dog profiles with images. The system also includes a live countdown, animations, and a responsive design.",
     highlights: [
       "Built a full-stack web application enabling users to browse adoptable dogs, submit adoption requests, and manage animal profiles.",
       "Designed and implemented a Node.js + Express backend to handle routing, database interactions, and image uploads.",
-      "Integrated a MySQL database with structured schemas for dogs and adopters, supporting persistent data storage."
+      "Integrated a MySQL database with structured schemas for dogs and adopters, supporting persistent data storage.",
     ],
-    technologyStack:[ "HTML/CSS", "JavaScript","Node.js", "MySQL"],
+    technologyStack: ["HTML/CSS", "JavaScript", "Node.js", "MySQL"],
     links: [
-      {label: "GitHub", url:"https://github.com/mmassey1084/Dynamic-Paws-and-Forever"}
-    ]
+      {
+        label: "GitHub",
+        url: "https://github.com/mmassey1084/Dynamic-Paws-and-Forever",
+      },
+    ],
   },
   {
     projectId: "book-catalog-application",
     title: "Book Catalog Application",
     role: "Full-Stack / Front-End",
     year: "2023",
-    tags: ["HTML", "CSS", "Node.js", "Express","JavaScript"],
-    summary: "A full-stack web application that allows users to add books to a catalog and search them by title or author.",
+    tags: ["HTML", "CSS", "Node.js", "Express", "JavaScript"],
+    summary:
+      "A full-stack web application that allows users to add books to a catalog and search them by title or author.",
     highlights: [
       "Built RESTful API endpoints to handle book creation, retrieval, and database interactions.",
       "Designed a relational MySQL schema to store and query book records by title and author.",
-      "Implemented live search functionality using the Fetch API with dynamic table rendering on the frontend."
+      "Implemented live search functionality using the Fetch API with dynamic table rendering on the frontend.",
     ],
-    technologyStack:[ "HTML/CSS", "JavaScript","Node.js", "MySQL"],
+    technologyStack: ["HTML/CSS", "JavaScript", "Node.js", "MySQL"],
     links: [
-      {label: "GitHub", url:"https://github.com/mmassey1084/Book-Catalog-Application"}
-    ]
+      {
+        label: "GitHub",
+        url: "https://github.com/mmassey1084/Book-Catalog-Application",
+      },
+    ],
   },
   {
     projectId: "car-dealership-application",
     title: "Car Dealership Application",
     role: "Full-Stack / Front-End",
     year: "2023",
-    tags: ["HTML", "CSS", "Node.js", "Express","JavaScript"],
-    summary: "A full-stack web application for managing a car dealership’s inventory, customer records, sales transactions, and monthly payment reports. It uses Node.js, Express, and MySQL for the backend and static HTML for the frontend.",
+    tags: ["HTML", "CSS", "Node.js", "Express", "JavaScript"],
+    summary:
+      "A full-stack web application for managing a car dealership’s inventory, customer records, sales transactions, and monthly payment reports. It uses Node.js, Express, and MySQL for the backend and static HTML for the frontend.",
     highlights: [
       "Developed a full-stack web application to manage vehicle inventory, customer records, and sales transactions for a car dealership.",
       "Built a Node.js and Express backend with RESTful API endpoints to handle CRUD operations and business logic.",
       "Designed and integrated a MySQL database schema supporting cars, customers, sales, and payment records.",
       "Implemented static HTML forms for adding inventory, registering customers, and processing vehicle sales.",
-      "Created a monthly payment reporting feature that aggregates expected revenue and payments made, displayed in a structured table format."
+      "Created a monthly payment reporting feature that aggregates expected revenue and payments made, displayed in a structured table format.",
     ],
-    technologyStack:[ "HTML/CSS", "JavaScript","Node.js", "MySQL"],
+    technologyStack: ["HTML/CSS", "JavaScript", "Node.js", "MySQL"],
     links: [
-      {label: "GitHub", url:"https://github.com/mmassey1084/Car-Dealership-Application"}
-    ]
+      {
+        label: "GitHub",
+        url: "https://github.com/mmassey1084/Car-Dealership-Application",
+      },
+    ],
   },
   {
     projectId: "housing-mlops-deployment",
@@ -129,16 +240,25 @@ export const projectItems = [
     role: "Machine Learning Engineer",
     year: "2024",
     tags: ["Python", "Scikit-learn", "Linear Regression", "Machine Learning"],
-    summary: "A simple MLOps workflow for predicting housing prices based on features like area and bedrooms. The model is trained using linear regression and deployed using a lightweight Gradio web app.",
+    summary:
+      "A simple MLOps workflow for predicting housing prices based on features like area and bedrooms. The model is trained using linear regression and deployed using a lightweight Gradio web app.",
     highlights: [
       "Built an end-to-end machine learning workflow to predict housing prices using linear regression.",
       "Trained and evaluated a regression model using Python, pandas, and scikit-learn.",
       "Implemented a training pipeline that serializes the model using joblib for reuse and deployment.",
-      "Developed a lightweight Gradio web application to serve real-time housing price predictions."
+      "Developed a lightweight Gradio web application to serve real-time housing price predictions.",
     ],
-    technologyStack:["Python", "Scikit-learn", "Linear Regression", "Machine Learning"],
+    technologyStack: [
+      "Python",
+      "Scikit-learn",
+      "Linear Regression",
+      "Machine Learning",
+    ],
     links: [
-      {label: "GitHub", url:"https://github.com/mmassey1084/housing-mlops-deployment"}
-    ]
-  }
+      {
+        label: "GitHub",
+        url: "https://github.com/mmassey1084/housing-mlops-deployment",
+      },
+    ],
+  },
 ];

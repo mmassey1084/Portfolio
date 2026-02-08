@@ -57,8 +57,7 @@ export default function GlitchType({
       if (delayRef.current) clearTimeout(delayRef.current);
       if (intervalRef.current) clearInterval(intervalRef.current);
     };
-  }, [finalText, speed, startDelay, restartKey]); // ✅ restartKey forces a clean restart
-
+  }, [finalText, speed, startDelay, restartKey]); 
   const stable = finalText.slice(0, count);
   const tail = done
     ? ""
