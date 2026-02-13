@@ -1,5 +1,5 @@
 import React, { useMemo, useState } from "react";
-import AccordionItem from "./AccordionItem.jsx"; // <-- adjust path
+import AccordionItem from "./AccordionItem.jsx"; 
 
 export default function AccordionGroup({ children, defaultOpenIndex = null }) {
   const [openItemIndex, setOpenItemIndex] = useState(defaultOpenIndex);

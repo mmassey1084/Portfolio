@@ -26,10 +26,6 @@ export default function ContactPage() {
     }, 10);
   }
 
-  function handleContactFormSubmit(event) {
-    event.preventDefault();
-    // Wire this up later (EmailJS/Formspree/backend)
-  }
 
   return (
     <>

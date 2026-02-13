@@ -16,7 +16,6 @@ export default function GlitchType({
   glitchTail = 4,
   glitchChars = GLITCH_CHARS,
 
-  // NEW: parent-controlled restart trigger
   restartKey = 0,
 
   blinkCursor = true,
