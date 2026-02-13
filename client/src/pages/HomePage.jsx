@@ -24,7 +24,7 @@ export default function HomePage() {
     window.scrollTo({ top: 0, left: 0, behavior: "auto" });
   }, []);
 
-  // ✅ Nav shows when the entry is NOT on screen
+ 
   useEffect(() => {
     const currentEntryRef = entryRef.current;
     if (!currentEntryRef) return;
@@ -44,7 +44,6 @@ export default function HomePage() {
     <div className="home">
       {navVisible && <TopNavigation />}
 
-      {/* ✅ NEW: Entry moved into its own component */}
       <EntryHero
         entryRef={entryRef}
         onScrollToContent={scrollToContent}
@@ -64,16 +63,14 @@ export default function HomePage() {
             <PanelSection title="Let's dive deeper into more about me">
               <div className="grid">
                 <p>
-                  I’m a full-stack developer who loves building interactive web
+                  I’m a software engineer who loves building interactive web
                   and mobile applications using tools like React, Vite, Node.js,
                   Express, MySQL, and Tailwind CSS. I got into tech because I
-                  enjoy turning ideas into real, usable products; whether that’s
-                  a booking system, or a full production app like the one I’m
-                  building for The Church Studio in Tulsa.
+                  enjoy turning ideas into real, usable products.
                 </p>
                 <p>
-                  I have a strong foundation in JavaScript frameworks, and I
-                  focus on writing clean, scalable code and creating interfaces
+                  I have a strong foundation in JavaScript frameworks, Data Structures
+                  Algorithms,and Java. and I focus on writing clean, scalable code and creating interfaces
                   that feel smooth, and accessible. I care a lot about details
                   like performance, responsiveness, and accessibility; making
                   sure what I build works well for everyone. Lately, I’ve been
@@ -82,9 +79,8 @@ export default function HomePage() {
                   third-party platforms.
                 </p>
                 <p>
-                  Outside of coding, I’m big into design, sports, and creative
-                  projects; everything from Pokémon card tracking apps to
-                  restaurant and spa websites. I thrive in collaborative
+                  Outside of coding, I’m big into design, sports, and collecting
+                  pokemon cards. I thrive in collaborative
                   environments, love learning fast, and enjoy tackling hard
                   problems. My goal is to build meaningful products that people
                   actually enjoy using and that make a real impact.
@@ -201,35 +197,6 @@ export default function HomePage() {
               </div>
             </PanelSection>
           </div>
-
-          <PanelSection title="Process (How I Work)">
-            <div className="grid grid-3">
-              <div className="card">
-                <strong>1) Discover</strong>
-                <p>Goals, requirements, audience, talk to stakeholders.</p>
-              </div>
-              <div className="card">
-                <strong>2) Design</strong>
-                <p>Wireframe, UI system, accessibility.</p>
-              </div>
-              <div className="card">
-                <strong>3) Build</strong>
-                <p>React components, APIs, testing.</p>
-              </div>
-              <div className="card">
-                <strong>4) Ship</strong>
-                <p>Deploy, performance, SEO basics.</p>
-              </div>
-              <div className="card">
-                <strong>5) Improve</strong>
-                <p>Iterate based on feedback from stakeholders and results.</p>
-              </div>
-              <div className="card">
-                <strong>6) Document</strong>
-                <p>README, screenshots, handoff notes.</p>
-              </div>
-            </div>
-          </PanelSection>
 
           <PanelSection title="Professional Experience">
             <AccordionGroup defaultOpenIndex={0}>

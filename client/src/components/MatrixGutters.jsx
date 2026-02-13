@@ -17,7 +17,7 @@ export default function MatrixGutters({
     return window.innerWidth >= minDesktopWidthPx;
   });
 
-  // Track viewport 
+
   useEffect(() => {
     const handleResize = () => {
       setIsDesktopViewport(window.innerWidth >= minDesktopWidthPx);
@@ -28,7 +28,7 @@ export default function MatrixGutters({
   }, [minDesktopWidthPx]);
 
   useEffect(() => {
-    // If not laptop/desktop, stop animation + clear canvases
+ 
     const leftCanvas = leftGutterCanvasRef.current;
     const rightCanvas = rightGutterCanvasRef.current;
 
@@ -124,7 +124,7 @@ export default function MatrixGutters({
     characterOpacity,
   ]);
 
-  //  don't render canvases on non-desktop
+  
   if (!isDesktopViewport) return null;
 
   return (

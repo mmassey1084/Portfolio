@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 
 export default function HeroText() {
   const nameText = "Michael Massey";
-  const subText = "Full-Stack Developer/Software Developer";
+  const subText = "Software Engineer";
   const typingSpeed = 100;
   const restartDelay = 20000;
 

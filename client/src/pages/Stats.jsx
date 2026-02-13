@@ -21,7 +21,6 @@ export default function Stats() {
   const [analytics, setAnalytics] = useState({ views: 0, likes: 0 });
   const [errorMessage, setErrorMessage] = useState("");
 
-  // localStorage flag for like toggle
   const likeStorageKey = useMemo(() => `portfolio_liked_${githubUsername}`, []);
   const [hasLiked, setHasLiked] = useState(() => localStorage.getItem(likeStorageKey) === "true");
 
@@ -48,7 +47,7 @@ export default function Stats() {
     })();
   }, []);
 
-  // Increment views once per session
+
   useEffect(() => {
   const sessionKey = `portfolio_viewed_${githubUsername}`;
   const alreadyCounted = sessionStorage.getItem(sessionKey) === "true";
@@ -61,13 +60,13 @@ export default function Stats() {
         headers: { "Content-Type": "application/json" },
       });
 
-      // ✅ only mark as counted after success
+      
       sessionStorage.setItem(sessionKey, "true");
 
       if (updated) setAnalytics(updated);
     } catch (error) {
       console.error("Failed to increment view:", error);
-      // ✅ don’t set session key on failure, so it can retry next load
+      
       sessionStorage.removeItem(sessionKey);
     }
   })();
@@ -77,7 +76,7 @@ export default function Stats() {
     const nextHasLiked = !hasLiked;
     const delta = nextHasLiked ? 1 : -1;
 
-    // optimistic UI update
+    
     setHasLiked(nextHasLiked);
     localStorage.setItem(likeStorageKey, String(nextHasLiked));
     setAnalytics((prev) => ({ ...prev, likes: Math.max((prev.likes ?? 0) + delta, 0) }));
@@ -90,7 +89,7 @@ export default function Stats() {
       });
       if (updated) setAnalytics(updated);
     } catch (error) {
-      // rollback if server fails
+      
       console.error(error);
       setHasLiked((prev) => {
         const rolledBack = !prev;
@@ -108,7 +107,7 @@ export default function Stats() {
       <main className="section with-fixed-nav">
         <div className="container">
           <h1 className="h2">GitHub Stats</h1>
-          <p className="muted">Live stats pulled from the GitHub API + portfolio analytics.</p>
+          <p className="muted">Live stats pulled from the GitHub API</p>
 
           {errorMessage ? <p className="muted">{errorMessage}</p> : null}
 

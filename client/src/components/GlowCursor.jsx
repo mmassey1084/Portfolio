@@ -10,7 +10,7 @@ export default function GlowCursor() {
     let targetX = window.innerWidth / 2;
     let targetY = window.innerHeight / 2;
 
-    // start at target so it doesn't "fly in"
+  
     let x = targetX;
     let y = targetY;
 
@@ -22,12 +22,12 @@ export default function GlowCursor() {
     let rafId;
 
     const animate = () => {
-      // lead position 
+
       x += (targetX - x) * 0.25;
       y += (targetY - y) * 0.25;
 
       elements.forEach((el, i) => {
-        // each dot lags more 
+
         const speed = Math.max(0.06, 0.22 - i * 0.02);
 
         const prevX = el._x ?? x;
@@ -36,7 +36,7 @@ export default function GlowCursor() {
         el._x = prevX + (x - prevX) * speed;
         el._y = prevY + (y - prevY) * speed;
 
-        // ✅ center the dot on the cursor so it reaches screen edges
+    
         const left = el._x - SIZE / 2;
         const top = el._y - SIZE / 2;
 
